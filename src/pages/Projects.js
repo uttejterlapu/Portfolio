@@ -4,7 +4,9 @@ const projects = [
   {
     title: 'My Portfolio',
     description: 'A personal portfolio built with React to showcase my projects and skills.',
-    link: '/portfolio',
+    link: 'https://uttejterlapu.vercel.app/',
+    github: 'https://github.com/uttejterlapu/Portfolio'
+
   },
   {
     title: 'Traveling Landing Page',
