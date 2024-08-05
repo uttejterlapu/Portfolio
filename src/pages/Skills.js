@@ -48,7 +48,8 @@ const responsive = {
 
 const Skills = () => {
   const cardStyle = {
-    width: '300px',
+    width: '90%',
+    maxWidth: '300px',
     height: '400px',
     borderRadius: '15px',
     overflow: 'hidden',
@@ -63,7 +64,7 @@ const Skills = () => {
     alignItems: 'center',
     padding: '20px',
     position: 'relative',
-    margin: '10px',
+    margin: '10px auto',
     cursor: 'pointer',
     perspective: '1000px',
   };
@@ -115,7 +116,7 @@ const Skills = () => {
   };
 
   return (
-    <div id="skills" style={{ backgroundColor: '#222831', color: '#EEEEEE', sssssspadding: '2rem' }}>
+    <div id="skills" style={{ backgroundColor: '#222831', color: '#EEEEEE', padding: '2rem' }}>
       <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '1.5rem', textAlign: 'center' }}>Technical Skills</h1>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <Carousel
