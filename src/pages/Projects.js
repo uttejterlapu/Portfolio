@@ -21,7 +21,12 @@ const projects = [
     link: 'https://uttejterlapu.github.io/Invensis/',
     github: 'https://github.com/uttejterlapu/Invensis'
   },
-  
+  {
+    title: 'Drag and Drop Quiz App',
+    description: 'A Drag and Drop Quiz App using Jquery. Built with Html, CSS, JQuery and deployed on Vercel.',
+    link: 'https://uttejterlapu.github.io/dragandrop/',
+    github: 'https://github.com/uttejterlapu/dragandrop'
+  },
 ];
 
 const Projects = () => {

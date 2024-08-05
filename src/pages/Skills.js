@@ -6,7 +6,7 @@ import 'react-multi-carousel/lib/styles.css'; // Ensure the carousel styles are 
 const skills = [
   { 
     category: 'Web Development', 
-    skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Angular'],
+    skills: ['HTML', 'CSS', 'JavaScript', 'Jquery' ,'React', 'Angular'],
     description: 'Proficient in building responsive and interactive web applications using modern web technologies.'
   },
   { 
