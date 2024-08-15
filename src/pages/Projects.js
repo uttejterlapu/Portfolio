@@ -27,6 +27,12 @@ const projects = [
     link: 'https://uttejterlapu.github.io/dragandrop/',
     github: 'https://github.com/uttejterlapu/dragandrop'
   },
+  {
+    title: 'Real-Time Stock Market Dashboard',
+    description: 'The Real-Time Stock Market Dashboard is a sophisticated web application designed to provide users with up-to-date stock market information. Built using the MERN stack (MongoDB, Express.js, React, Node.js), the dashboard offers real-time trade data visualization and the latest stock market news. It leverages Chart.js for graphical data representation and d3.js for advanced data manipulation and visualization.',
+    link: 'https://real-time-stock-market-dashboard.vercel.app/',
+    github: 'https://github.com/uttejterlapu/Real-Time-Stock-Market-Dashboard'
+  },
 ];
 
 const Projects = () => {
