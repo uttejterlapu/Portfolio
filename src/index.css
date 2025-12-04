@@ -1,61 +1,144 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss";
 
+:root {
+  /* Light Mode Colors */
+  --color-bg-primary: #f8fafc;
+  /* Slate 50 */
+  --color-bg-secondary: #ffffff;
+  /* White */
+  --color-bg-tertiary: #f1f5f9;
+  /* Slate 100 */
+
+  --color-text-primary: #0f172a;
+  /* Slate 900 */
+  --color-text-secondary: #475569;
+  /* Slate 600 */
+
+  --color-border: #e2e8f0;
+  /* Slate 200 */
+
+  --color-primary: #4f46e5;
+  /* Indigo 600 - Darker for better contrast on light */
+  --color-secondary: #db2777;
+  /* Pink 600 */
+
+  --color-accent: #818cf8;
+  /* Indigo 400 */
+}
+
+.dark {
+  /* Dark Mode Colors */
+  --color-bg-primary: #0f172a;
+  /* Slate 900 */
+  --color-bg-secondary: #1e293b;
+  /* Slate 800 */
+  --color-bg-tertiary: #334155;
+  /* Slate 700 */
+
+  --color-text-primary: #f8fafc;
+  /* Slate 50 */
+  --color-text-secondary: #94a3b8;
+  /* Slate 400 */
+
+  --color-border: #334155;
+  /* Slate 700 */
+
+  --color-primary: #6366f1;
+  /* Indigo 500 - Brighter for dark mode */
+  --color-secondary: #ec4899;
+  /* Pink 500 */
+
+  --color-accent: #a5b4fc;
+  /* Indigo 300 */
+}
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+
+  --color-background: var(--color-bg-primary);
+  --color-surface: var(--color-bg-secondary);
+  --color-surface-hover: var(--color-bg-tertiary);
+
+  --color-foreground: var(--color-text-primary);
+  --color-muted: var(--color-text-secondary);
+
+  --color-border: var(--color-border);
+
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  @apply bg-background text-foreground font-sans overflow-x-hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
 }
 
-/* Loader styles */
-.loader {
-  border: 8px solid #f3f3f3;
-  border-top: 8px solid #00ADB5;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: spin 2s linear infinite;
+.theme-transition-inward::view-transition-old(root) {
+  z-index: 10;
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+.theme-transition-inward::view-transition-new(root) {
+  z-index: 1;
 }
 
-.carousel-container {
-  margin: 0 auto;
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-.carousel-item {
-  display: flex;
-  justify-content: center;
+::-webkit-scrollbar-track {
+  @apply bg-background;
 }
 
-/* Optional: Add a responsive max-width for carousel items */
-@media (min-width: 1024px) {
-  .carousel-item {
-    max-width: 350px;
+::-webkit-scrollbar-thumb {
+  @apply bg-border rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted;
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   }
 }
 
-@media (max-width: 1024px) {
-  .carousel-item {
-    max-width: 280px;
+.animate-morph {
+  animation: morph 8s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
   }
 }
 
-@media (max-width: 464px) {
-  .carousel-item {
-    max-width: 220px;
-  }
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
