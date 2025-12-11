@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, Github, Send } from 'lucide-react';
+import { Mail, Linkedin, Github, Send, Coffee } from 'lucide-react';
 
 const Contact = () => {
     return (
@@ -49,6 +49,9 @@ const Contact = () => {
                                 </a>
                                 <a href="https://github.com/uttejterlapu" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-surface-hover rounded-full flex items-center justify-center border border-border hover:bg-primary hover:border-primary transition-all duration-300 text-foreground hover:text-white">
                                     <Github size={24} />
+                                </a>
+                                <a href="https://buymeacoffee.com/uttejterlapu" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-surface-hover rounded-full flex items-center justify-center border border-border hover:bg-primary hover:border-primary transition-all duration-300 text-foreground hover:text-white">
+                                    <Coffee size={24} />
                                 </a>
                             </div>
                         </div>
