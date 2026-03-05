@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Sphere, MeshDistortMaterial } from '@react-three/drei';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
-import Mypic from '../assets/Mypic.png';
+import Mypic from '../assets/new.png';
 
 const Hero = () => {
     const date = new Date();
